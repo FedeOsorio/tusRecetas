@@ -1,0 +1,36 @@
+<main class="recetasContainer">
+    <div class="leftContainer">
+        <aside class="menuCategory">
+            <h3>Recetas</h3>
+            <h4 class="h4Cat">Categoria</h4>
+            <ul class="categoryUl" *ngFor="let titulo of arrayTitulos">
+                <li class="categoryLi">{{titulo}}
+                    <input type="checkbox" #checkTitulo class="checkTitulo" [attr.titulo]="titulo"
+                        [attr.data-titulo]="titulo" [checked]="false" (change)="filtrar()">
+                </li>
+            </ul>
+            <h4 class="h4Estilo">Estilo</h4>
+            <ul *ngFor="let categoria of categorias" class="categoryUl">
+                <li class="categoryLi">{{categoria}}
+                    <input type="checkbox" #checkCategoria class="checkReceta" [attr.categoria]="categoria"
+                        [attr.data-categoria]='categoria' [checked]="false" (change)="filtrar()"
+                        (click)="limpiarUrl()">
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <div class="rightContainer">
+
+        <app-card-receta></app-card-receta>
+    </div>
+    <div class="botonContenedor" *ngIf="sesionIniciada">
+        <button class="botonPublicar" (click)="mostrarPublicar = !mostrarPublicar">Publicar receta</button>
+    </div>
+    <div class="botonContenedor" *ngIf="!sesionIniciada">
+        <button class="botonPublicar" (click)="evitarPublicar()">Publicar receta</button>
+    </div>
+    <div *ngIf="mostrarPublicar" class="agregarRecetaContainer" [@aparecer]="estado">
+        <button class="botonCerrar" (click)="mostrarPublicar =!mostrarPublicar">X</button>
+        <app-agregar-receta></app-agregar-receta>
+    </div>
+</main>

@@ -1,0 +1,59 @@
+<section class="itemRecetaContainer" *ngIf="!detalleReceta">
+    <div class="searchPlaceReceta">
+        <input class="searchRecetaBar" [(ngModel)]="valorBusqueda" (keydown.enter)="buscarRecetas()"
+            placeholder="Buscar receta... o categoria... o ingredientes...">
+        <button class="searchRecetaButton" (click)="buscarRecetas()">
+            <fa-icon [icon]="faMagnifying"></fa-icon>
+        </button>
+    </div>
+    <div class="divCards">
+        <div class="itemCard" *ngFor="let receta of (arrayRecetas | searchbar:busqueda) | filtro: page" [@fade]
+            (click)="abrirReceta(receta.idReceta)">
+            <img src="assets/img/recetaGeneral.png" class="itemImg" alt="{{receta.titulo}}">
+            <div class="itemDiv" [attr.data-id]="receta.categoria">
+                <strong class="itemTitle">{{receta.titulo}}</strong>
+                <div class="itemCat">{{receta.categoria}}</div>
+                <br>
+                <br>
+                <p class="itemProcd">{{receta.procedimiento.substring(0, 40)}}
+                    <span *ngIf="receta.procedimiento.length > 40">...</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="contBotones">
+        <button class="btnPage btnPrev" (click)="prevPage()" [disabled]="page == 0">
+            Anterior
+        </button>
+        <p *ngIf="page==0" class="numberPage"><b>{{page /8}}</b></p>
+        <p *ngIf="page>0" class="numberPage">{{(page/8)-1}} < <b>{{page/8}}</b> > {{(page/8)+1}}</p>
+        <button class="btnPage btnNext" (click)="nextPage()" [disabled]="(arrayRecetas | filtro: page).length<8"
+            [disabled]="(arrayRecetas | searchbar:busqueda |filtro:page).length<8">
+            Siguiente
+        </button>
+    </div>
+</section>
+<section class="" *ngIf="detalleReceta">
+    <div class="divCardDetalle">
+        <div class="itemCardDetalle" *ngIf="recetaElegida">
+            <button class="botonVolver" type="button" id="volverTeka" (click)="mostrarItemReceta()"><img
+                    src=""><a>Volver</a></button>
+            <h1 class="itemTitleDetalle">{{recetaElegida.titulo}}</h1>
+            <img src="assets/img/recetaGeneral.png" class="itemImgDetalle" alt="imagen de {{recetaElegida.titulo}}">
+            <div class="itemDiv">
+                <div class="divIngredientes">Ingredientes:
+                    <p class="itemCatDetalle">Receta de tipo: {{recetaElegida.categoria}}</p>
+                </div>
+                <div class="ingredientesContainer">
+                    <ul class="itemIngredientes" *ngFor="let ingrediente of recetaElegida.ingredientes">
+                        <li>{{ingrediente.nombre}}: {{ingrediente.cantidad}}</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="divProcedimiento">Procedimiento:
+            <p class="itemProcDetalle">{{recetaElegida.procedimiento}} </p>
+        </div>
+    </div>
+</section>

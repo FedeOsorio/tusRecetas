@@ -1,0 +1,33 @@
+<div class="mainTitles">
+    <h1 class="h1Title">Ayuda</h1>
+    <h2 class="h2Title">En esta sección puedes contactarte con nosotros y enviarnos tu consulta</h2>
+</div>
+<div class="misDatosContainer">
+    <h3 class="profileTitle"> Formulario de asistencia</h3>
+    <form #contactForm="ngForm" (ngSubmit)="enviarConsulta(contactForm)">
+        <div class="datoUsuario">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" [(ngModel)]="nombre" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+        </div>
+        <div class="datoUsuario">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" [(ngModel)]="correo" id="correo" name="correo"
+                placeholder="Escribe tu correo electrónico" ngModel required>
+        </div>
+        <div class="datoUsuario">
+            <label for="asunto">Asunto:</label>
+            <select class="form-control" [(ngModel)]="asunto" name="asunto" ngModel required>
+                <option value="" disabled selected>-- Selecciona el asunto del mensaje --</option>
+                <option value="Tradicional">Eliminar receta</option>
+                <option value="Vegan">Sugerencias para el sitio</option>
+                <option value="Veggie">Otro problema</option>
+            </select>
+        </div>
+        <div class="datoUsuario">
+            <label for="mensaje">Mensaje:</label>
+            <textarea [(ngModel)]="mensaje" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí"
+                ngModel required></textarea>
+        </div>
+        <button type="submit" class="botonEnviar">Enviar mensaje</button>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --karla: 'Karla', sans-serif;
+    --lora: 'Lora', serif;
+    --mont: 'Montserrat', sans-serif;
+    --colorShadow: #b19465;
+    --colorLetra: #974646;
+    --colorPage: #f6efdf;
+    --colorBack: rgba(251, 247, 239, 0.765);
+    --colorBack3: rgba(251, 247, 239, 0.9);
+    --colorBack2: rgb(251, 247, 239);
+    --colorWeb: #eee0ce3b;
+    --borderTest: 3px solid #b99e7448;
+    --colorOscuro: rgb(116, 83, 40);
+}
+
+html {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: var(--colorBack);
+    font-family: var(--karla);
+    font-weight: 400;
+    color: var(--colorLetra);
+    width: 100%;
+}

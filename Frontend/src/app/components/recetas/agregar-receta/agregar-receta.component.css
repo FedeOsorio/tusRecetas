@@ -1,0 +1,186 @@
+main {
+    font-family: var(--mont);
+}
+
+.form {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+    width: 120px;
+    display: flex;
+    justify-content: left;
+    margin-right: 60px;
+}
+
+input {
+    border-radius: 2px;
+    border: 1px solid var(--colorLetra);
+    margin-top: 10px;
+    width: 240px;
+    height: 30px;
+    outline: var(--colorLetra);
+    background-color: #fffefb;
+    color: #290a0a;
+
+}
+
+select {
+    width: 240px;
+    height: 30px;
+    border: 1px solid var(--colorLetra);
+    outline: var(--colorLetra);
+    background-color: #fffefb;
+    color: #290a0a;
+}
+
+textarea {
+    resize: none;
+    border: 1px solid var(--colorLetra);
+    outline: var(--colorLetra);
+    background-color: #fffefb;
+    color: #290a0a;
+}
+
+.formPublicar {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+    padding: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.procedimiento {
+    align-self: flex-start;
+}
+
+.publicarError {
+    color: rgba(239, 20, 20, 0.827);
+    width: 60%;
+    margin-left: 185px;
+    bottom: 2px;
+    position: relative;
+}
+
+.formIngredientes {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    justify-content: space-evenly;
+}
+
+.containerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 430px;
+}
+
+.ingredientesContainer {
+    position: relative;
+    top: -10px;
+    box-sizing: border-box;
+    margin-right: 12px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.labelIngrediente {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.labelIng {
+    font-size: 12px;
+    position: relative;
+    top: 9px;
+}
+
+.inputIng {
+    width: 100%;
+    font-size: 11px;
+}
+
+.botonIngrediente {
+    margin-top: 4px;
+    cursor: pointer;
+    background-color: #ead8b9;
+    color: var(--colorLetra);
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 6px;
+    padding-left: 6px;
+    padding-right: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: var(--mont);
+    font-size: 12px;
+}
+
+.botonIngrediente:hover {
+    background-color: #e1c694;
+}
+
+.botonEliminar {
+    margin-top: 4px;
+    cursor: pointer;
+    background-color: #ead8b9;
+    color: var(--colorLetra);
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 11.1px;
+    padding-left: 6px;
+    padding-right: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: var(--mont);
+}
+
+.botonEliminar:hover {
+    background-color: #e1c694;
+}
+
+.pAgregar {
+    font-size: 8px;
+    font-weight: 600;
+    display: flex;
+    width: fit-content;
+    margin-top: 4px;
+}
+
+.divCrear {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    justify-content: center;
+    width: fit-content;
+}
+
+.botonCrear {
+    background-color: var(--colorLetra);
+    color: rgb(245, 245, 245);
+    border: none;
+    padding: 8px;
+    text-align: center;
+    justify-self: center;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-style: var(--mont);
+}
+
+.subirImagen{
+    width: 290px;
+    height: 23px;
+}

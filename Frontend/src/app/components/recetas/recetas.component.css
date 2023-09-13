@@ -1,0 +1,138 @@
+.recetasContainer {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 140px;
+}
+
+.rightContainer {
+    margin-left: 60px;
+    width: 75%;
+}
+
+.leftContainer {
+    width: 360px;
+    background-image: url("../../../assets/img/recetas/bento.jpg");
+    background-position: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    display: flex;
+    box-shadow: 1px 0px 8px 0px rgba(24, 24, 24, 0.492);
+    height: auto;
+}
+
+.botonContenedor {
+    position: relative;
+    left: 50px;
+    width: 140px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.botonPublicar {
+    width: 100%;
+    background-color: var(--colorLetra);
+    color: rgb(245, 245, 245);
+    border: none;
+    padding: 10px;
+    text-align: center;
+    justify-self: center;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.botonPublicar:active {
+    font-size: 13px;
+    background-color: rgb(149, 52, 72);
+
+}
+
+.menuCategory {
+    background-color: var(--colorBack3);
+    width: 240px;
+    margin: auto;
+    border-radius: 3px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-left: 4px solid #b99e7448;
+}
+
+.menuCategory h3 {
+    font-size: 24px;
+    font-family: var(--mont);
+    border-bottom: 2px solid rgba(114, 81, 54, 0.667);
+    width: 80%;
+    margin-bottom: 12px;
+}
+
+.h4Estilo {
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+
+.h4Cat {
+    margin-bottom: 2px;
+}
+
+.categoryUl {
+    margin: auto;
+    width: 74%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titulosUl {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categoryLi {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 2px;
+}
+
+.agregarRecetaContainer {
+    padding: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 720px;
+    margin: auto;
+    background-color: var(--colorBack2);
+    box-shadow: 0px 1px 20px 1px black;
+    border-radius: 4px;
+}
+
+.botonCerrar {
+    position: absolute;
+    font-family: var(--karla);
+    border-radius: 4px;
+    font-weight: 600;
+    right: 71px;
+    width: 22px;
+    height: 22px;
+    top: 51px;
+    cursor: pointer;
+    background-color: #ead8b9;
+    color: var(--colorLetra);
+    border: 1px solid #9d3f1a48
+}
+
+.botonCerrar:hover {
+    background-color: #e1c694;
+}

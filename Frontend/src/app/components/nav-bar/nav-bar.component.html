@@ -1,0 +1,19 @@
+<hr class="shadow">
+<header>
+    <nav class="navBar">
+        <img class="logo" src="../assets/img/logo.png" alt="logo">
+        <ul class="ulNav">
+            <li><a routerLink="">Inicio</a></li>
+            <li><a routerLink='/recetas'>Recetas</a></li>
+        </ul>
+        <div class="divh1">
+            <h1 class="h1Index"><strong>Tus Recetas</strong></h1>
+        </div>
+        <div class="divbuttons">
+            <a *ngIf="ocultarBoton" routerLink='/profile' class="buttonProfile">Mi perfil</a>
+            <a *ngIf="!ocultarBoton" routerLink='/login' class="buttonLogin">Ingresar</a>
+            <a *ngIf="!ocultarBoton" routerLink='/registro' class="buttonRegister">Registrarse</a>
+            <a *ngIf="ocultarBoton" (click)="cerrarSesion()" class="sessionEnd">Cerrar sesión</a>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,65 @@
+<div class="mainTitles">
+    <h1 class="h1Title">Mi Perfil</h1>
+    <h2 class="h2Title">En esta sección puedes ver y modificar tus datos personales</h2>
+</div>
+<div class="misDatosContainer">
+    <h3 class="profileTitle"> Información del usuario</h3>
+    <div class="datoUsuario">
+        <h4>Usuario:</h4>
+        <p>{{datosUsuario.usuario}}</p>
+        <button class="btnOcultar btnActualizar" *ngIf="!updateUsuario"
+            (click)="actualizarUsuario()">Actualizar</button>
+        <button class="btnOcultar btnActualizar" *ngIf="updateUsuario" (click)="actualizarUsuario()">Cancelar</button>
+        <input type="text" class="inputActualizar" *ngIf="updateUsuario" [(ngModel)]="nuevoUsuario"
+            placeholder="Nuevo usuario...">
+    </div>
+    <div class="datoUsuario">
+        <h4>Clave:</h4>
+        <p class="claveOculta" *ngIf="!mostrarClave">**********</p>
+        <p class="claveOculta" *ngIf="mostrarClave">{{datosUsuario.clave}}</p>
+        <button class="btnOcultar btnOcultarClave" *ngIf="!mostrarClave" (click)="ocultarClave()">Mostrar
+            contraseña</button>
+        <button class="btnOcultar btnOcultarClave" *ngIf="mostrarClave" (click)="ocultarClave()">Ocultar
+            contraseña</button>
+        <button class="btnOcultar btnActualizarClave" *ngIf="!updateClave"
+            (click)="actualizarClave()">Actualizar</button>
+        <button class="btnOcultar btnActualizarClave" *ngIf="updateClave" (click)="actualizarClave()">Cancelar</button>
+        <input type="text" class="inputActualizar" *ngIf="updateClave" [(ngModel)]="nuevaClave"
+            placeholder="Nueva clave...">
+    </div>
+    <div class="datoUsuario">
+        <h4> Nombre:</h4>
+        <p> {{datosUsuario.nombre}}</p>
+        <button class="btnOcultar btnActualizar" *ngIf="!updateNombre" (click)="actualizarNombre()">Actualizar</button>
+        <button class="btnOcultar btnActualizar" *ngIf="updateNombre" (click)="actualizarNombre()">Cancelar</button>
+        <input type="text" class="inputActualizar" *ngIf="updateNombre" [(ngModel)]="nuevoNombre"
+            placeholder="Nuevo nombre...">
+    </div>
+    <div class="datoUsuario">
+        <h4>Apellido:</h4>
+        <p> {{datosUsuario.apellido}}</p>
+        <button class="btnOcultar btnActualizar" *ngIf="!updateApellido"
+            (click)="actualizarApellido()">Actualizar</button>
+        <button class="btnOcultar btnActualizar" *ngIf="updateApellido" (click)="actualizarApellido()">Cancelar</button>
+        <input type="text" class="inputActualizar" *ngIf="updateApellido" [(ngModel)]="nuevoApellido"
+            placeholder="Nuevo apellido...">
+    </div>
+    <div class="divAceptar">
+        <div class="aceptarContainer">
+            <button class="btnAceptar" (click)="aceptarActualizar()"
+                *ngIf="updateNombre || updateClave || updateUsuario || updateApellido">Guardar</button>
+            <span class="usuarioError" *ngIf="errorActualizarUsuario">* El usuario ingresado ya está en uso</span>
+            <span class="usuarioError" *ngIf="camposInvalidos">* Algo salió mal, revise las condiciones de
+                actualización</span>
+        </div>
+    </div>
+    <div class="condUpdate">
+        <h5>Condiciones para actualizar la información de su usuario:</h5>
+        <p>- No puede ingresar valores en blanco.</p>
+        <p>- No puede actualizar más de un campo al mismo tiempo.</p>
+        <p>- Solo puede actualizar la información de a un campo a la vez, o los 4 juntos.</p>
+    </div>
+    <div class="eliminarContainer">
+        <button class="btnOcultar btnEliminarUsuario" (click)="eliminarUsuario()">Eliminar usuario</button>
+    </div>
+</div>

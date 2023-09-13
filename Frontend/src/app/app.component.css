@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+    --karla: 'Karla', sans-serif;
+    --lora: 'Lora', serif;
+    --mont: 'Montserrat', sans-serif;
+    --colorShadow: #a18455;
+    --colorLetra: #974646;
+    --colorPage: #ebe3d0;
+    --colorBack: rgba(251, 247, 239, 0.765);
+    --colorBack3: rgba(251, 247, 239, 0.9);
+    --colorBack2: rgb(251, 247, 239);
+    --colorWeb: #f0dec63b;
+    --borderTest: 3px solid #b99e7448;
+    --colorOscuro: rgb(116, 83, 40);
+}
+

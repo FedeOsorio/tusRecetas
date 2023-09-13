@@ -1,0 +1,56 @@
+<main>
+    <h1>Agregar una receta</h1>
+    <form class="form" [formGroup]="publicarForm">
+        <div class="formPublicar">
+            <label for="titulo">Título</label>
+            <input type="text" class="form-control nombreReceta" formControlName="titulo" name="titulo" required>
+        </div>
+        <div *ngIf="mostrarErrores && titulo.invalid">
+            <p class="publicarError">*Debe ingresar un título</p>
+        </div>
+        <div class="formPublicar">
+            <label for="categoria">Categoria</label>
+            <select class="form-control" formControlName="categoria" name="categoria">
+                <option value="" disabled selected>-- Elija una categoría --</option>
+                <option value="Tradicional">Tradicional</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Veggie">Veggie</option>
+            </select>
+        </div>
+        <div *ngIf="mostrarErrores && categoria.invalid">
+            <p class="publicarError">*Debe seleccionar una categoria</p>
+        </div>
+        <div class="formPublicar">
+            <div class="labelIngrediente">
+                <label>Ingredientes:</label>
+                <button class="botonIngrediente" (click)="agregarIngrediente()">+ Agregar</button>
+            </div>
+            <div class="containerContainer">
+                <div class="ingredientesContainer" formArrayName="ingredientes"
+                    *ngFor="let ingrediente of ingredientes.controls; let i = index">
+                    <div [formGroupName]="i">
+                        <div class="formIngredientes">
+                            <label class="labelIng" [attr.for]="'nombre'+i">Nombre </label>
+                            <input [attr.id]="'nombre' +i" class="form-control inputIng" formControlName="nombre">
+                        </div>
+                        <div class="formIngredientes">
+                            <label class="labelIng" [attr.for]="'cantidad'+i">Cantidad </label>
+                            <input [attr.id]="'cantidad' +i" class="form-control inputIng" formControlName="cantidad">
+                        </div>
+                        <div>
+                            <button class="botonEliminar" (click)="removerIngrediente(i)">Eliminar
+                                ingrediente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="formPublicar">
+            <label class="procedimiento" for="procedimiento">Procedimiento: </label>
+            <textarea name="procedimiento" formControlName="procedimiento" cols="54" rows="8"></textarea>
+        </div>
+        <div class="divCrear">
+            <button class="botonCrear" (click)="cargarReceta()">Crear receta</button>
+        </div>
+    </form>
+</main>

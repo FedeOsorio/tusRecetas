@@ -1,0 +1,64 @@
+/* PROFILE */
+
+.profileContainer {
+    display: flex;
+    margin-top: 3px;
+    width: 80%;
+    height: 754px;
+}
+
+.menu {
+    width: 25%;
+    background-color: var(--colorPage);
+    min-width: 120px
+}
+
+.menu ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-left: 0px;
+    font-weight: 600;
+}
+
+.menu li {
+    width: 90%;
+    padding: 12px;
+    padding-left: 40px;
+    margin: auto;
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 15px;
+    background-color: #bd9f8454;
+    border-radius: 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.189);
+}
+
+.menu li:hover {
+    background-color: #bd9f8471;
+}
+
+.menu li:active{
+    background-color: #bd9f84ba;
+}
+
+/* PROFILE */
+a {
+    cursor: pointer;
+}
+
+.profileOption {
+    cursor: pointer;
+    min-width: 120px
+}
+
+.profileMain {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-top: 30px;
+    width: 100%;
+    flex-direction: column;
+}
+

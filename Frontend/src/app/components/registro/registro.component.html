@@ -1,0 +1,65 @@
+<main class="mainRegistro">
+    <section class="formContainerRegistro">
+        <div class="registroBackground">
+            <div>
+                <h1 class="h1login">Registrarte es simple</h1>
+            </div>
+            <div class="formRegistro">
+                <form [formGroup]="regForm" autocomplete="off">
+                    <div class="divRegistro">
+                        <div class="inputContainer">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" id="usuario" formControlName="usuario">
+                            <div *ngIf="mostrarErrores && regForm.controls['usuario'].invalid">
+                                <p class="usuarioError">* Usuario requerido.</p>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <div class="divClave">
+                                <label for="clave">Clave:</label>
+                                <input type="{{ mostrarClave ? 'text' : 'password' }}" id="clave"
+                                    formControlName="clave">
+                                <div class="eyeDiv">
+                                    <fa-icon *ngIf="!mostrarClave" (click)="mostrarClave= !mostrarClave"
+                                        [icon]="faEye"></fa-icon>
+                                    <fa-icon *ngIf="mostrarClave" (click)="mostrarClave= !mostrarClave"
+                                        [icon]="faEyeSlash"></fa-icon>
+                                </div>
+                                <div *ngIf="regForm.controls['clave'].invalid && mostrarErrores">
+                                    <div *ngIf="regForm.controls['clave'].errors?.['required']">
+                                        <p class="claveError">* Clave requerida.</p>
+                                    </div>
+                                    <div
+                                        *ngIf="regForm.controls['clave'].errors?.['minlength'] && !regForm.controls['clave'].errors?.['required']">
+                                        <p class="claveError">* La clave debe tener al menos 5 caracteres.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divRegistro">
+                        <div class="inputContainer">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" formControlName="nombre">
+                            <div *ngIf="mostrarErrores && regForm.controls['nombre'].invalid">
+                                <p class="usuarioError">* El campo no puede quedar vacio.</p>
+                            </div>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" formControlName="apellido">
+                            <div *ngIf="mostrarErrores && regForm.controls['apellido'].invalid">
+                                <p class="usuarioError">* El campo no puede quedar vacio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a style="color:rgb(183, 82, 20)" routerLink="/login">¿Ya tenes cuenta? Inicia sesión.</a>
+                    </div>
+                    <p *ngIf="mostrarDuplicado" class="duplicadoError">*Ese usuario ya se encuentra registrado</p>
+                    <button (click)="enviarFormulario()">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,246 @@
+.itemRecetaContainer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchPlaceReceta {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border-left: var(--borderTest);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 2px 0px rgba(48, 48, 48, 0.23);
+}
+
+.searchRecetaBar {
+    width: 100%;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--colorLetra);
+    font-weight: semi-bold;
+    height: 40px;
+    background-color: rgb(246, 246, 246)
+}
+
+.searchRecetaBar,
+.searchRecetaButton {
+    display: flex;
+    border-radius: 10px;
+    border: none;
+    font-family: var(--karla);
+}
+
+.searchRecetaButton {
+    align-items: center;
+    width: 60px;
+    height: 40px;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--colorLetra);
+    border-radius: 10px;
+    background-color: #e5d6bb;
+}
+
+.searchRecetaButton:active {
+    background-color: #d7b982;
+    font-size: .76rem;
+}
+
+.divCards {
+    width: 100%;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    height: 800px;
+    box-sizing: border-box;
+}
+
+.itemCard {
+    box-shadow: 0px 2px 3px 0px rgba(48, 48, 48, 0.364);
+    margin-bottom: 3px;
+    border-radius: 2px;
+    display: flex;
+    padding: 20px;
+    width: 48.5%;
+    background-color: var(--colorWeb);
+    scroll-behavior: smooth;
+}
+
+.itemCard:hover {
+    transform: scale(1.03);
+    transition: ease 80ms;
+}
+
+.itemImg {
+    object-fit: cover;
+    width: 155px;
+    height: 155px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(92, 78, 64, 0.304);
+}
+
+.filtro {
+    display: none;
+}
+
+.contBotones {
+    position: relative;
+    width: 100%;
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+    top: 45px;
+    right: 4px;
+}
+
+.btnPage {
+    background-color: var(--colorLetra);
+    color: rgb(245, 245, 245);
+    border: none;
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+    width: 80px;
+    font-size: 12px;
+}
+
+.btnPage:disabled {
+    pointer-events: none;
+    background-color: #a0645b
+}
+
+.btnPage:hover {
+    background-color: #80372c;
+}
+
+.btnPage:active {
+    font-size: 11px;
+
+    background-color: #a64031
+}
+
+.btnPrev {
+    position: relative;
+    right: 6px;
+}
+
+.btnNext {
+    position: relative;
+}
+
+.numberPage {
+    font-family: var(--karla);
+    font-size: 14px;
+    position: relative;
+    align-self: center;
+    right: 2px;
+    width: 60px;
+    text-align: center;
+}
+
+/* ITEM CARD SELECCIONADA */
+
+.itemRecetaContainerDetalle {
+    height: 100%;
+    width: 100%;
+}
+
+.itemCardDetalle {
+    box-shadow: 0px 0px 3px 0px var(--colorLetra);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 90.5%;
+}
+
+.itemTitleDetalle {
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+
+.ingredientesContainer {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 4px;
+    position: relative;
+    top: -2px;
+    height: 120px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.itemImgDetalle {
+    width: 320px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.divIngredientes {
+    margin-top: 20px;
+    position: relative;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.itemIngredientes {
+    list-style-type: circle;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.divProcedimiento {
+    box-shadow: 0px 0px 3px 0px var(--colorLetra);
+    height: 260px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    font-weight: 600;
+    width: 90.5%;
+    margin-top: 10px;
+}
+
+.itemProcDetalle{
+    font-weight: 400;
+}
+
+.botonVolver{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background-color: var(--colorLetra);
+    color: rgb(245, 245, 245);
+    border: none;
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+    width: 60px;
+    font-size: 12px;
+}
+
+.botonVolver:hover {
+    background-color: #80372c;
+}
+
+.botonVolver:active {
+    font-size: 11px;
+
+    background-color: #a64031
+}

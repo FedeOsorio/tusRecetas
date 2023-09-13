@@ -1,0 +1,31 @@
+<main class="mainIndex">
+    <section class="sliderBack">
+        <div class="slider">
+            <div>
+                <h2>Visitá nuestras categorias</h2>
+            </div>
+            <ul>
+                <li><a routerLink="recetas"><img src="../assets/img/burger.png" alt=""></a></li>
+                <li><a routerLink="recetas"><img src="../assets/img/bannerVegan.png" alt=""></a></li>
+                <li><a routerLink="recetas"><img src="../assets/img/chineseFood.jpg" alt=""></a></li>
+                <li><a routerLink="recetas"><img src="../assets/img/glutenFree.png" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="cards">
+        <div class="cardContainer">
+            <figure (click)="toTradicionales()">
+                <img src="../assets/img/tradFood.jpg" alt="category1">
+                <h3 class="textCategory">Recetas Tradicionales</h3>
+            </figure>
+            <figure (click)="toVeggie()">
+                <img src="../assets/img/veggie.png" alt="category2">
+                <h3 class="textCategory">Recetas Vegetarianas</h3>
+            </figure>
+            <figure (click)="toVegan()">
+                <img src="../assets/img/veganFood.png" alt="category3">
+                <h3 class="textCategory">Recetas Veganas</h3>
+            </figure>
+        </div>
+    </section>
+</main>

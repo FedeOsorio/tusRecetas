@@ -1,0 +1,83 @@
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    z-index: -50;
+    box-shadow: 0px 1px 100px 20px var(--colorShadow);
+}
+
+header{
+    width: 100%;
+}
+
+.navBar {
+    position: relative;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    font-family: var(--karla);
+    background-color: var(--colorWeb);
+    box-shadow: 0px 0px 5px .1px rgba(0, 0, 0, 0.244);
+}
+
+.logo {
+    height: 50px;
+    margin-left: 40px;
+}
+
+.divh1{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 20%;
+}
+
+.ulNav {
+    position: relative;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+
+.ulNav li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.ulNav li a {
+    text-decoration: none;
+    color: var(--colorLetra);
+}
+
+.divbuttons {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+
+.navBar div a {
+    margin-right: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--colorLetra);
+}
+
+.h1Index {
+    font-family: var(--mont);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 30px;
+    color: var(--colorLetra);
+}
+
+.h1Index strong {
+    font-weight: 700;
+}
+
+.sessionEnd {
+    cursor: pointer;
+}

@@ -1,0 +1,141 @@
+/* REGISTRO */
+
+.mainRegistro {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.formContainerRegistro {
+    width: 80%;
+    display: flex;
+    height: 440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    background-image: url(../../../assets/img/recetas/backRegistro.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px 1px rgba(26, 26, 26, 0.799);
+}
+
+.formContainerRegistro h1 {
+    margin-bottom: 20px;
+}
+
+.registroBackground {
+    background-color: var(--colorBack2);
+    padding: 20px;
+    box-shadow: 0px 0px 25px 0px rgba(21, 21, 21, 0.681);
+    border-radius: 6px;
+}
+
+.formRegistro .h1Registro {
+    margin-bottom: 20px;
+    font-family: var(--lora);
+    color: var(--colorOscuro);
+    text-shadow: 1px 1px 1px rgb(59, 57, 57);
+    font-size: 1.8rem;
+}
+
+.formRegistro input {
+    display: flex;
+    justify-content: center;
+    width: 240px;
+    font-size: .8rem;
+    margin-bottom: 12px;
+    height: 46px;
+    background-color: var(--colorPage);
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    padding-left: 12px;
+    color: var(--colorLetra);
+    outline-color: var(--colorLetra);
+
+}
+
+.formRegistro button {
+    margin-top: 15px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--colorLetra);
+    border: 2px solid var(--colorLetra);
+    border-radius: 15px;
+    background-color: var(--colorPage);
+}
+
+.formRegistro button:active {
+    background-color: #d5c09c;
+    font-size: .92rem;
+}
+
+.formRegistro{
+    display: flex;
+    justify-content: center;
+    width: 580px;
+}
+
+.formRegistro input {
+    display: flex;
+    margin-left: 10px;
+    flex-direction: row;
+}
+
+.divRegistro{
+    display: flex;
+    flex-direction: row;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.inputContainer label{
+    margin-left: 14px;
+    margin-bottom: 2px;
+}
+
+.usuarioError {
+    color: rgba(239, 20, 20, 0.827);
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+    bottom: 10px;
+    font-size: 15px;
+}
+
+.claveError {
+    color: rgba(239, 20, 20, 0.827);
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+    bottom: 10px;
+    flex-wrap: wrap;
+    width: 230px;
+    font-size: 15px;
+}
+
+.divClave{
+    position: relative;
+}
+
+.eyeDiv{
+    position: absolute;
+    top: 33px;
+    right: 20px;
+}
+
+.duplicadoError{
+    color: rgba(239, 20, 20, 0.827);
+    margin-top: 4px;
+    margin-bottom: -10px;
+}

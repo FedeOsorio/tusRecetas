@@ -1,0 +1,15 @@
+<section class="profileContainer">
+  <section class="menu">
+    <ul>
+      <li class="profileOption botonDatos" (click)="abrirComponenteDatos()">Mis datos</li>
+      <li class="profileOption botonMisRecetas" (click)="abrirComponenteAyuda()">Ayuda</li>
+    </ul>
+  </section>
+  <main class="profileMain" *ngIf="componenteDatos">
+    <app-datos></app-datos>
+  </main>
+
+  <main class="profileMain" *ngIf="componenteAyuda">
+    <app-ayuda-perfil></app-ayuda-perfil>
+  </main>
+</section>

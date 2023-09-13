@@ -1,0 +1,116 @@
+/* CÓDIGO DE LOGIN.HTML */
+.mainLogin {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../../../assets/img/recetas/burgerLogin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 480px;
+    width: 70%;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px 1px black;
+}
+
+.formBackground {
+    display: flex;
+    justify-content: center
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    justify-content: center;
+    height: 360px;
+    border-radius: 6px;
+    align-items: center;
+    background-color: var(--colorBack2);
+    box-shadow: 0px 0px 30px 1px black;
+}
+
+.formContainer .h1login {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-family: var(--mont);
+    font-weight: 600;
+    color: var(--colorLetra)
+}
+
+.formLogin input {
+    display: flex;
+    width: 300px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    height: 50px;
+    background-color: var(--colorPage);
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    padding-left: 20px;
+    color: var(--colorLetra);
+    outline-color: var(--colorLetra);
+}
+
+.formLogin button {
+    margin-top: 15px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--colorLetra);
+    border: 2px solid var(--colorLetra);
+    border-radius: 15px;
+    background-color: var(--colorPage);
+}
+
+.formLogin button:active {
+    background-color: #d5c09c;
+    font-size: .92rem;
+}
+
+.divSign {
+    display: flex;
+}
+
+.divSign input {
+    display: flex;
+    width: 250px;
+    margin-left: 10px;
+    flex-direction: row;
+}
+
+.usuarioError {
+    color: rgba(239, 20, 20, 0.827);
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+    bottom: 10px;
+}
+
+.claveError {
+    color: rgba(239, 20, 20, 0.827);
+    text-align: left;
+    margin-left: 5px;
+    position: relative;
+    bottom: 10px;
+}
+
+.claveDiv{
+    position: relative;
+}
+
+.eyeDiv{
+    position: absolute;
+    top: 16px;
+    right: 20px;
+}

@@ -1,0 +1,201 @@
+main {
+    margin-top: 60px;
+    background-color: var(--colorBack);
+    height: 657px;
+    position: relative;
+}
+
+.searchContainer {
+    position: absolute;
+    height: 80px;
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchPlace {
+    padding: 5px;
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #67635a6e;
+    align-items: center;
+}
+
+.searchBar {
+    width: 340px;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    height: 30px;
+    font-size: 1rem;
+    color: var(--colorLetra);
+    font-weight: semi-bold;
+    background-color: var(--colorBack);
+}
+
+.searchBar,
+.searchButton {
+    display: flex;
+    border-radius: 10px;
+    border: none;
+    font-family: var(--karla);
+}
+
+.searchButton {
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--colorLetra);
+    border-radius: 20px;
+    background-color: #ead8b9;
+}
+
+.searchButton:active {
+    background-color: #d7b982;
+    font-size: .76rem;
+}
+
+.cards {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.cardContainer {
+    cursor: pointer;
+    width: 80%;
+    display: flex;
+    position: relative;
+}
+
+.cardContainer figure {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--colorPage);
+    height: 200px;
+    position: relative;
+}
+
+.cardContainer img {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.textCategory {
+    font-size: 1rem;
+    text-align: center;
+    background-color: var(--colorShadow);
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARRUSEL */
+
+.slider {
+    position: absolute;
+    height: 283px;
+    overflow: hidden;
+    background-color: var(--colorBack);
+    width: 68%;
+    border-radius: 4px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0px 0px 5px 1px rgba(73, 73, 73, 0.773);
+}
+
+.sliderBack {
+    position: relative;
+    background-image: url("../../../assets/img/backComidas4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 340px;
+    display: flex;
+}
+
+.slider div {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    width: 700px;
+    background-color: var(--colorLetra);
+    font-size: .8rem;
+    z-index: 5000;
+    margin: auto;
+    position: relative;
+    top: 25px;
+}
+
+.slider div h2 {
+    line-height: 1;
+    color: white;
+    padding: 5px;
+    display: flex;
+}
+
+.slider ul {
+    display: flex;
+    animation: cambio 14s infinite alternate linear;
+    width: 400%;
+    height: 240px;
+}
+
+.slider li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider img {
+    width: 700px;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.348);
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -100%;
+    }
+
+    55% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -200%;
+    }
+
+    80% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}

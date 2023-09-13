@@ -1,0 +1,140 @@
+footer {
+    height: 128px;
+    position: relative;
+    background-color: var(--colorPage);
+    display: flex;
+    color: var(--colorLetra);
+    font-family: var(--karla)
+}
+
+footer div i {
+    margin-left: 20px;
+    margin-right: 2px;
+    font-size: 20px;
+}
+
+.divSusc {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    top: -6px;
+}
+
+.divSusc label{
+    font-size: .84rem;
+    padding-left:42px;
+    font-weight: 600;
+    font-family: var(--mont);
+}
+
+.inputSusc {
+    width: 216px;
+    padding-left: 12px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    height: 34px;
+    font-size: .8rem;
+    color: var(--colorLetra);
+    font-weight: semi-bold;
+    background-color: var(--colorBack);
+    font-family: var(--mont);
+}
+
+.buttonSuscInvalid {
+    align-items: center;
+    width: 80px;
+    height: 34px;
+    justify-content: center;
+    font-weight: 600;
+    color: rgb(144, 137, 137);
+    font-family: var(--mont);
+    font-size: .75rem;
+    border-radius: 6px;
+    position: relative;
+    right: 0px;
+    border: 2px solid #918e8980;
+    background-color: #c1bfbd;
+}
+
+
+.buttonSusc {
+    align-items: center;
+    width: 80px;
+    height: 34px;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--colorLetra);
+    font-family: var(--mont);
+    font-size: .75rem;
+    border-radius: 6px;
+    position: relative;
+    right: 0px;
+    border: 2px solid #a1845580;
+    background-color: #ead8b9;
+}
+
+.buttonSusc:active {
+    background-color: #d7b982;
+    font-size: .76rem;
+}
+
+.redesContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-top: 24px;
+}
+
+.iconsRedes {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 26px;
+}
+
+.ig {
+    color: rgb(229, 43, 126);
+}
+
+.linkd {
+    color: rgb(67, 67, 207);
+}
+
+.copyContainer {
+    display: flex;
+    position: absolute;
+    margin: auto;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    padding-bottom: 25px;
+    gap: 5px;
+}
+
+.nosotrosContainer {
+    display: flex;
+    width: fit-content;
+    position: absolute;
+    margin: auto;
+    margin-top: 24px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--mont);
+
+}
+
+.nosotrosContainer h5 {
+    font-weight: 500;
+    font-size: 12px;
+}

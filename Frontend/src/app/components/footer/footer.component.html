@@ -1,0 +1,31 @@
+<footer>
+    <div class="redesContainer">
+        <h4>Redes sociales</h4>
+        <div class="iconsRedes">
+            <a href="https://www.linkedin.com/in/fedeosorio/" target="_blank"> <fa-icon class="linkd"
+                    [icon]="faLinkedin"></fa-icon></a>
+            <a href="https://www.instagram.com" target="_blank"> <fa-icon class="ig" [icon]="faInstagram"></fa-icon></a>
+        </div>
+    </div>
+    <div class="copyContainer">
+        <fa-icon [icon]="faCopyright"></fa-icon>
+        <h4>2023 - Tus Recetas</h4>
+    </div>
+    <div class="nosotrosContainer">
+        <h5>"Nuestra meta es reunir las mejores recetas de cocina y que cualquier persona sea capaz de seguirlas.<br>
+            No importa el tipo de receta que sea, nosotros la adaptamos para que puedas disfrutar del placer de comer."
+        </h5>
+    </div>
+    <div class="divSusc">
+        <form (ngSubmit)="onSubmit(suscribeForm)" #suscribeForm="ngForm">
+            <div>
+                <label>¡Enterate de las nuevas recetas!</label>
+            </div>
+            <input type="email" class="inputSusc" placeholder="Ingresa un correo..." required email [(ngModel)]="email"
+                name="email" #emailInput="ngModel" autocomplete="off">
+            <button class="buttonSusc" type="submit" *ngIf="suscribeForm.valid">Suscribirse</button>
+            <button class="buttonSuscInvalid" type="submit" *ngIf="suscribeForm.invalid" [disabled]="suscribeForm.invalid">Suscribirse</button>
+        </form>
+        
+    </div>
+</footer>

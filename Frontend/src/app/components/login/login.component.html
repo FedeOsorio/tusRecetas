@@ -1,0 +1,40 @@
+<main class="mainLogin">
+    <section class="formContainer">
+        <section class="formBackground">
+            <div class="formLogin">
+                <div>
+                    <h1 class="h1login">Inicia sesión<br>con tu usuario</h1>
+                </div>
+                <form [formGroup]="logForm" (submit)="getDataUsuario()">
+                    <label for="usuario"></label>
+                    <input type="text" name="usuario" formControlName="usuario" class="user" placeholder="Usuario"
+                        autocomplete="off">
+                    <div *ngIf="mostrarErrorUsuario && logForm.controls['usuario'].invalid">
+                        <p class="usuarioError">* Usuario requerido.</p>
+                    </div>
+                    <div class="claveDiv">
+                        <label for="clave"></label>
+                        <input type="{{ mostrarClave ? 'text' : 'password' }}" name="clave" formControlName="clave"
+                            class="pass" placeholder="Contraseña">
+                        <div class="eyeDiv">
+                            <fa-icon *ngIf="!mostrarClave" (click)="mostrarClave= !mostrarClave"
+                                [icon]="faEye"></fa-icon>
+                            <fa-icon *ngIf="mostrarClave" (click)="mostrarClave= !mostrarClave"
+                                [icon]="faEyeSlash"></fa-icon>
+                        </div>
+                    </div>
+                    <div *ngIf="mostrarInvalido && logForm.controls['clave'].valid">
+                        <p class="claveError">* Datos de acceso incorrectos.</p>
+                    </div>
+                    <div *ngIf="mostrarErrorClave && logForm.controls['clave'].invalid">
+                        <p class="claveError">* Ingrese una clave.</p>
+                    </div>
+                    <div>
+                        <a style="color:rgb(183, 82, 20)" routerLink="/registro">¿No tenes cuenta? Registrate.</a>
+                    </div>
+                    <button class="buttonIngreso">Iniciar sesión</button>
+                </form>
+            </div>
+        </section>
+    </section>
+</main>
